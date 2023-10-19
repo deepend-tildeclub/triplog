@@ -2,11 +2,12 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    transition: all 0.3s ease;
 }
 
 body {
-    background-color: #222;
-    color: #f5f5f5;
+    background-color: #f7f7f7;
+    color: #333;
     font-family: 'Arial', sans-serif;
 }
 
@@ -14,10 +15,12 @@ body {
     max-width: 1000px;
     margin: 40px auto;
     padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .destination-header {
-    background-color: #1e3c72;
+    background-color: #e6f2ff;
     padding: 5px 10px;
     cursor: pointer;
 }
@@ -30,16 +33,11 @@ body {
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.3s ease-in-out;
-}
-
-.collapsed .destination-content {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease;
+    background-color: #f7f7f7;
 }
 
 .destination {
-    border: 1px solid #ccc;
+    border: 1px solid #e0e0e0;
     padding: 5px;
     margin-bottom: 5px;
 }
@@ -49,13 +47,10 @@ body {
     margin-bottom: 5px;
 }
 
-.destination label:last-of-type {
-    margin-bottom: 0;
-}
-
 h1 {
     text-align: center;
     margin-bottom: 30px;
+    color: #1e3c72;
 }
 
 form {
@@ -70,32 +65,15 @@ input[type="number"],
 input[type="date"],
 textarea {
     width: 100%;
-    background-color: #333;
-    border: 1px solid #555;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
     padding: 6px;
-    color: #f5f5f5;
+    color: #333;
     font-size: 16px;
-}
-input[type="file"] {
-    display: block;
-    margin: 5px 0;
-}
-input[type="submit"] {
-    background-color: #4caf50;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    width: 40%;
 }
 
-button[type="button"] {
-    background-color: #1e3c72; /* Change to your desired color */
-    color: white;
+input[type="submit"], button[type="button"] {
+    background-color: #1e3c72;
     border: none;
     color: white;
     padding: 15px 32px;
@@ -111,120 +89,272 @@ button[type="button"] {
   display: flex;
 }
 
-.regular-button {
-  flex: 1;
-  margin-right: 3px;
+.regular-button, .submit-button {
+    flex: 1;
+    margin: 3px;
 }
-
-.submit-button {
-  flex: 1;
-  margin-left: 3px;
-}
-
-
-/* Trip log table */
-.trip-log-table {
-    width: 100%;
-    border-collapse: collapse;
-    color: #fff;
-}
-
-.trip-log-table th,
-.trip-log-table td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: left;
-}
-
-.trip-log-table th {
-    background-color: #1e3c72;
-    font-weight: bold;
-}
-
-.trip-log-table tr:nth-child(even) {
-    background-color: #2c2c2c;
+.cancel-button {
+    display: inline-block;
+    padding: 15px 32px;
+    border: none;
+    background-color: #1e3c72; /* Matches existing buttons */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    width: 40%; /* Matches existing buttons */
 }
 
 /* Trip log table */
 .trip-log-table {
     width: 100%;
     border-collapse: collapse;
-    color: #f5f5f5;
+    color: #333;
 }
 
 .trip-log-table th,
 .trip-log-table td {
-    border: 1px solid #555;
+    border: 1px solid #e0e0e0;
     padding: 8px;
     text-align: left;
 }
 
 .trip-log-table th {
-    background-color: #1e3c72;
+    background-color: #e6f2ff;
     font-weight: bold;
 }
 
 .trip-log-table tr:nth-child(even) {
-    background-color: #2c2c2c;
+    background-color: #f7f7f7;
 }
 
-/* Add styles for the table */
 table {
     border-collapse: collapse;
     width: 100%;
     margin-top: 20px;
 }
 
-th,
-td {
-    border: 1px solid #555;
+th, td {
+    border: 1px solid #e0e0e0;
     padding: 8px;
     text-align: left;
-    color: #f5f5f5;
+    color: #333;
 }
 
 th {
-    background-color: #1e3c72;
-    font-weight: bold;
+    background-color: #e6f2ff;
 }
 
 tr:nth-child(even) {
-    background-color: #2c2c2c;
+    background-color: #f7f7f7;
 }
 
 input[type="datetime-local"] {
     width: auto;
-    background-color: #333;
-    border: 1px solid #555;
+    background-color: #f5f5f5;
+    border: 1px solid #e0e0e0;
     padding: 6px;
-    color: #f5f5f5;
+    color: #333;
     font-size: 16px;
 }
 
-/* Add this to your styles.css file */
 .search-results-list {
     list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
-/* Update this in your styles.css file */
 .search-result {
     padding: 10px;
     cursor: pointer;
-    border: 1px solid #555;
-    background-color: #333;
+    border: 1px solid #e0e0e0;
+    background-color: #f5f5f5;
     margin-bottom: 5px;
-    transition: background-color 0.3s;
-    color: #f5f5f5;
 }
 
 .search-result:hover {
-    background-color: #444;
+    background-color: #e6e6e6;
 }
 
 .trip-report {
     display: none;
+}
+
+/* Flex container for the username and logout button */
+.header-right {
+    display: flex;
+    align-items: center; /* Vertically center aligns the child items */
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.header-section {
+    display: flex;
+    justify-content: space-between;  /* Pushes title to left and user details to right */
+    align-items: center;  /* Vertically aligns the items in the middle */
+}
+
+.user-section {
+    display: flex;
+    align-items: center;  /* Vertically aligns the username and the button */
+}
+
+.username-display {
+    margin-right: 20px; /* Adds space between the username and the logout button */
+    font-weight: bold;  /* Makes the username bold for emphasis */
+}
+
+.logout-button {
+    min-width: 100px;
+    width: auto;
+    background-color: #FF4500;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: inline-block;
+}
+
+.logout-button {
+    min-width: 100px; /* Set a minimum width */
+    width: auto; /* Allow it to adjust if the content inside is larger than the minimum width */
+    background-color: #FF4500;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: inline-block;
+    margin-left: 10px; /* Space between the username and the button */
+}
+
+.logout-button:hover {
+    background-color: #FF6347;
+}
+
+.username-display {
+    font-weight: bold;  /* Makes the username bold for emphasis */
+}
+
+/* Login Button */
+.login-button {
+    width: auto !important; /* Override width */
+    background-color: #FF4500;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+}
+
+.login-button:hover {
+    background-color: #FF6347;
+}
+/* Style for the toggle button */
+#toggle-button {
+    background-color: #1e3c72;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect */
+#toggle-button:hover {
+    background-color: #1e3c72;
+}
+
+/* Active state */
+#toggle-button:active {
+    background-color: #1e3c72;
+}
+/* Style for the remove link */
+.remove-link {
+    display: inline-block;
+    background-color: #1e3c72;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;  /* Remove underline */
+}
+
+/* Hover effect */
+.remove-link:hover {
+    background-color: #1e3c72;
+}
+
+/* Active state */
+.remove-link:active {
+    background-color: #1e3c72;
+}
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+        .arrow {
+            cursor: pointer;
+            font-size: 24px;
+            margin: 20px;
+            user-select: none;
+        }
+
+        .arrow:hover {
+            color: gray;
+        }
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 
@@ -235,20 +365,13 @@ input[type="datetime-local"] {
         color: #000;
     }
 
-    table {
+    table, th, td {
         color: #000;
         border-color: #000;
     }
 
-    th,
-    td {
-        color: #000;
-        background-color: #fff;
-    }
-
     th {
         background-color: #f2f2f2;
-        color: #000;
     }
 
     .print-logo {

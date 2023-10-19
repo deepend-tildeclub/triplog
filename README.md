@@ -1,2 +1,0 @@
-# triplog
-Delivery Trip Log 
